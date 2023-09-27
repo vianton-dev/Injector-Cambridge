@@ -1,0 +1,188 @@
+details {
+    width: 80%;
+    margin: 0 auto ;
+    background: #282828;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  summary {
+    padding: 1rem;
+    display: block;
+    background: #333;
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+  }
+  
+  /* THE MAGIC 🧙‍♀️ */
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+  
+  
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+  
+  details > ul {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+  }
+    
+  body {
+    background: #222;
+    height: 100%;
+    width: 500px;
+    font-family: sans-serif;
+    color: white;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    margin-top: 0px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+  }
+
+  li {
+    margin-right: 10px;
+    list-style: none;
+    font-size: 15px;
+
+  }
+
+  header {
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+
+  .btn-clear {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 38px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .btn-clear:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+
+  .btn-clear:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  .btn-clear:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  .container-clear {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*buttons*/
+
+  .wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .btn:last-child {
+    margin-right: 0;
+  }
+  
+  
+  .btn:before, .btn:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .close-btn {
+    background: #FF5D5B;
+    border: 4px solid #CF544D;
+  }
+  
+  .me-btn {
+    background: #FFBB39;
+    border: 4px solid #CFA64E;
+  }
+  
+  .max-btn {
+    background: #00CD4E;
+    border: 4px solid #0EA642;
+  }
+ 
+  /* Hover function */
+  .btn:hover:before, .btn:hover:after {
+    top: 50%;
+    opacity: 1;
+  }
